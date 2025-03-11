@@ -5,4 +5,4 @@ repos:
       - id: terraform_fmt   # Auto-format Terraform code
       - id: terraform_validate  # Validate Terraform syntax
       - id: terraform_tflint  # Lint Terraform code
-      - id: terraform_docs  # Auto-generate module documentation
+      # - id: terraform_docs  # Auto-generate module documentation
