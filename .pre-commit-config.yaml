@@ -1,0 +1,8 @@
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.79.0  # Use the latest stable version
+    hooks:
+      - id: terraform_fmt   # Auto-format Terraform code
+      - id: terraform_validate  # Validate Terraform syntax
+      - id: terraform_tflint  # Lint Terraform code
+      - id: terraform_docs  # Auto-generate module documentation

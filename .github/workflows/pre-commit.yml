@@ -1,0 +1,40 @@
+# name: Pre-Commit Checks
+
+# on:
+#   pull_request:
+#     branches:
+#       - main
+
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   pre-commit:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Code
+#         uses: actions/checkout@v4
+
+#       - name: Install Pre-Commit
+#         run: pip install pre-commit
+
+#       - name: Install Terraform CLI
+#         uses: hashicorp/setup-terraform@v3
+#         with:
+#           terraform_version: latest
+
+#       - name: Install TFLint
+#         run: |
+#           curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+#           tflint --version
+
+#       - name: Install Terraform Docs
+#         run: |
+#           wget https://github.com/terraform-docs/terraform-docs/releases/latest/download/terraform-docs-$(uname)-amd64 -O /usr/local/bin/terraform-docs
+#           chmod +x /usr/local/bin/terraform-docs
+#           terraform-docs --version
+
+#       - name: Run Pre-Commit Hooks
+#         run: pre-commit run --all-files --show-diff-on-failure

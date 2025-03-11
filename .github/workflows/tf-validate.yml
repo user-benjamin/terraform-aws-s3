@@ -1,0 +1,25 @@
+# name: Terraform Validate
+
+# on:
+#   push:
+#     paths:
+#       - '**.tf'
+
+# jobs:
+#   validate:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Setup Terraform
+#         uses: hashicorp/setup-terraform@v3
+#         with:
+#           terraform_version: latest
+
+#       - name: Initialize Terraform
+#         run: terraform init
+
+#       - name: Validate Terraform Code
+#         run: terraform validate

@@ -1,0 +1,30 @@
+# name: Semantic Versioning
+
+# on:
+#   push:
+#     branches:
+#       - main  # Runs only on main branch
+
+# jobs:
+#   bump-version:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0  # Required for tagging
+
+#       - name: Bump version and push tag
+#         id: tag_version
+#         uses: anothrNick/github-tag-action@1.69.0
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           DEFAULT_BUMP: patch  # Default to patch if no keyword is found
+#           WITH_V: true  # Prefix tag with "v"
+#           RELEASE_BRANCHES: main
+
+#       - name: Output new version
+#         run: echo "New version is ${{ steps.tag_version.outputs.new_tag }}"

@@ -1,0 +1,25 @@
+# Terraform state files (sensitive & should not be in Git)
+*.tfstate
+*.tfstate.backup
+terraform.tfstate.d/
+
+# Terraform CLI cache & working directory
+.terraform/
+.terraform.lock.hcl
+
+# Local environment variables (avoid exposing credentials)
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+
+# Crash logs (if Terraform crashes, it generates these)
+crash.log
+crash.*.log
+
+# Plan output files (should be ephemeral)
+*.tfplan
+
+# Secrets or credentials (if used in CI/CD)
+*.key
+*.pem
