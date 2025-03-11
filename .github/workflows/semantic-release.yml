@@ -25,7 +25,7 @@ jobs:
           node-version: "20"
 
       - name: Install Dependencies
-        run: npm install -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github
+        run: npm install -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github conventional-changelog-conventionalcommits
 
       - name: Run Semantic Release
         env:
